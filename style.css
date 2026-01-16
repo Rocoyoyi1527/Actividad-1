@@ -1,0 +1,213 @@
+/* --- Reset y Variables --- */
+:root {
+    --primary-color: #2c3e50;    /* Azul oscuro profesional */
+    --accent-color: #3498db;     /* Azul brillante para botones/enlaces */
+    --bg-light: #f4f4f4;         /* Fondo gris muy claro */
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Encabezado --- */
+.main-header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.mission-vision p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Sección de Proyectos (Grid/Flex) --- */
+.projects-section {
+    padding: 4rem 0;
+    background-color: var(--bg-light);
+}
+
+.projects-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.projects-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que bajen de línea si no caben */
+    gap: 20px;
+}
+
+.project-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 300px; /* Crecen y se encogen, base de 300px */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.btn-project {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: bold;
+    border: 2px solid var(--accent-color);
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.btn-project:hover {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+}
+
+/* --- Sección de Contacto --- */
+.contact-section {
+    padding: 4rem 0;
+}
+
+.contact-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.contact-section > .container > p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: var(--accent-color);
+}
+
+/* --- Pie de Página --- */
+.main-footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: auto;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: var(--text-light);
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Diseño Responsivo (Media Queries) --- */
+@media (max-width: 768px) {
+    /* Ajustes para tabletas y celulares */
+    .main-header {
+        padding: 2rem 0;
+    }
+
+    .main-header h1 {
+        font-size: 2rem;
+    }
+
+    .projects-grid {
+        flex-direction: column; /* Apila los proyectos verticalmente */
+    }
+
+    .contact-form {
+        padding: 15px;
+        width: 100%;
+    }
+}
